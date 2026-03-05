@@ -1,0 +1,357 @@
+{
+  "columns": [
+    "NESTES",
+    "Couserans",
+    "SAINT-GAUDENS",
+    "BAIGTS",
+    "Baralet"
+  ],
+  "rows": [
+    {
+      "bgClass": "bg-blue",
+      "emails": [
+        "inaki.duhalde@edf.fr",
+        "pierre.fernandez@edf.fr",
+        "florian.uni@edf.fr",
+        "matthieu.labourdette@edf.fr",
+        "sylvain.romeo@edf.fr"
+      ],
+      "label": "Correspondant SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "DUHALDE Inaki",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Florian UNI",
+          "phone": ""
+        },
+        {
+          "name": "Matthieu Labourdette",
+          "phone": "+33 5 59 65 38 04"
+        },
+        {
+          "name": "Sylvain ROMEO",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "laurent.casalot@edf.fr",
+        "said.ou-hammou@edf.fr",
+        "benoit.cros@edf.fr",
+        "antoine.labarbe@edf.fr",
+        ""
+      ],
+      "label": "Coordo SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Laurent CASALOT",
+          "phone": "0610967699"
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Benoit CROS",
+          "phone": "0562007202"
+        },
+        {
+          "name": "Antoine LABARBE",
+          "phone": "0559653800 / 0676292657"
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "label": "Coordo Planning",
+      "type": "contact",
+      "values": [
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "barthelemy.steck@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "barthelemy.steck@edf.fr"
+      ],
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy Steck",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy Steck",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "values": [
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Ouvrages",
+      "type": "simple",
+      "values": [
+        "Rioumajou; CF Fabian",
+        "Araing",
+        "BMC Valentine; BMC Gentille",
+        "Baigts",
+        "Peilhou; Estaens"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "baptiste.bernichan@edf.fr",
+        "jean-charles.record@edf.fr",
+        "thierry.ledesma@edf.fr",
+        "emmanuel.laberthonniere@edf.fr",
+        "francois.vallee@edf.fr"
+      ],
+      "label": "Chef du GU",
+      "type": "contact",
+      "values": [
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Thierry LEDESMA",
+          "phone": "0562007201/0680409800"
+        },
+        {
+          "name": "Emmanuel LABERTHONNIERE",
+          "phone": ""
+        },
+        {
+          "name": "François VALLEE",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "isLink": true,
+      "label": "Ingénieur UP",
+      "type": "simple",
+      "values": [
+        "romain.craeynest@edf.fr",
+        "aude.faidix@edf.fr",
+        "aude.faidix@edf.fr",
+        "aude.faidix@edf.fr",
+        "aude.faidix@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "CORBAR",
+      "type": "simple",
+      "values": [
+        "Richard.CODIS@hydrostadium.fr",
+        "Aristide.SAILLARD@hydrostadium.fr",
+        "Benedicte.frey@hydrostadium.fr",
+        "clement.laporte@hydrostadium.fr",
+        "Emilie.HEZARI@hydrostadium.fr; Aristide.SAILLARD@hydrostadium.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "isLink": true,
+      "label": "Correspondant SDO GEH",
+      "type": "simple",
+      "values": [
+        "francois.longatte@edf.fr",
+        "francois.longatte@edf.fr",
+        "francois.longatte@edf.fr",
+        "francois.longatte@edf.fr",
+        "francois.longatte@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "BAL générique GU",
+      "type": "simple",
+      "values": [
+        "exploitant-st-lary@edf.fr",
+        "exploitant-couserans@edf.fr",
+        "exploitant-saint-gaudens@edf.fr",
+        "exploitant-baigts@edf.fr",
+        "exploitant-baralet@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "values": [
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse"
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone barrage",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone général",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Ligne PAD",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Numéro usine X",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Adresse postale",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "title": "* Pyrénées *"
+}

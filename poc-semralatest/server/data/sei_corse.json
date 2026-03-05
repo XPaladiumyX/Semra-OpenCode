@@ -1,0 +1,205 @@
+{
+  "title": "* SEI Corse *",
+  "columns": [
+    "Castirla (Corsica, Calacuccia)",
+    "Castirla (Sampolo, Trevadine)",
+    "Ocana (Pont de la Vana, Tolla)",
+    "Ocana (Rizzanese)"
+  ],
+  "rows": [
+    {
+      "label": "Correspondant SDO",
+      "type": "contact",
+      "bgClass": "bg-blue",
+      "values": [
+        {"name": "SALINI Daniel", "phone": "04 95 21 26 27"},
+        {"name": "SALINI Daniel", "phone": "04 95 21 26 27"},
+        {"name": "PROTTI Ugo", "phone": "04 95 21 26 27"},
+        {"name": "ADRIAN Hubert", "phone": "04 95 29 86 31 / 06 69 15 65 27"}
+      ],
+      "emails": [
+        "daniel.salini@edf.fr",
+        "daniel.salini@edf.fr",
+        "gaetan.evangelisti@edf.fr;ugo.protti@edf.fr",
+        "fabien.vincensini@edf.fr; adrian-a.hubert@edf.fr"
+      ],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan"]
+    },
+    {
+      "label": "Coordo SDO",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "SALINI Daniel", "phone": "04 95 21 26 27"},
+        {"name": "FIORENTINI Philippe", "phone": "04 95 56 68 03"},
+        {"name": "PROTTI Ugo", "phone": "04 95 21 26 27"},
+        {"name": "PROTTI Ugo", "phone": "04 95 21 26 27"}
+      ],
+      "emails": [
+        "daniel.salini@edf.fr",
+        "philippe.fiorentini@edf.fr",
+        "ugo.protti@edf.fr",
+        "ugo.protti@edf.fr"
+      ],
+      "cellBgClasses": ["bg-blue", "bg-cyan", "bg-cyan", "bg-cyan"]
+    },
+    {
+      "label": "Coordo Planning",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""}
+      ],
+      "emails": ["", "", "", ""]
+    },
+    {
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "values": [
+        {"name": "Elisabeth BARROS-MAUREL", "phone": ""},
+        {"name": "Elisabeth BARROS-MAUREL", "phone": ""},
+        {"name": "Elisabeth BARROS-MAUREL", "phone": ""},
+        {"name": "Elisabeth BARROS-MAUREL", "phone": ""}
+      ],
+      "emails": [
+        "elisabeth.barros-maurel@edf.fr",
+        "elisabeth.barros-maurel@edf.fr",
+        "elisabeth.barros-maurel@edf.fr",
+        "elisabeth.barros-maurel@edf.fr"
+      ]
+    },
+    {
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "values": [
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""}
+      ],
+      "emails": ["", "", "", ""]
+    },
+    {
+      "label": "Ouvrages",
+      "type": "simple",
+      "bgClass": "bg-cyan",
+      "values": [
+        "Corscia; Calacuccia",
+        "Sampolo; Trévadine",
+        "Pont de la Vana; Tolla",
+        "Rizzanese"
+      ]
+    },
+    {
+      "label": "Chef du GU",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "Mathieu Cannata", "phone": ""},
+        {"name": "Mathieu Cannata", "phone": ""},
+        {"name": "Cyril Llorens", "phone": ""},
+        {"name": "Cyril Llorens", "phone": ""}
+      ],
+      "emails": [
+        "mathieu.cannata@edf.fr",
+        "mathieu.cannata@edf.fr",
+        "cyril.llorens@edf.fr",
+        "cyril.llorens@edf.fr"
+      ]
+    },
+    {
+      "label": "Ingénieur UP",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "isLink": true,
+      "values": [
+        "sebastien.philippe@edf.fr;florent.cardolaccia@edf.fr",
+        "sebastien.philippe@edf.fr;florent.cardolaccia@edf.fr",
+        "sebastien.philippe@edf.fr;florent.cardolaccia@edf.fr",
+        "sebastien.philippe@edf.fr;florent.cardolaccia@edf.fr"
+      ]
+    },
+    {
+      "label": "CORBAR",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": [
+        "sammy.essir@edf.fr",
+        "sammy.essir@edf.fr",
+        "madly.leroux@edf.fr",
+        "madly.leroux@edf.fr"
+      ]
+    },
+    {
+      "label": "Correspondant SDO GEH",
+      "type": "simple",
+      "bgClass": "bg-cyan",
+      "isLink": true,
+      "values": [
+        "florent.cardolaccia@edf.fr",
+        "florent.cardolaccia@edf.fr",
+        "florent.cardolaccia@edf.fr",
+        "florent.cardolaccia@edf.fr"
+      ]
+    },
+    {
+      "label": "BAL générique GU",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": [
+        "sei-corse-sp-gh-castirla@edf.fr",
+        "sei-corse-sp-gh-castirla@edf.fr",
+        "",
+        ""
+      ]
+    },
+    {
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": ["Toulouse", "Toulouse", "Toulouse", "Toulouse"]
+    },
+    {
+      "label": "Téléphone barrage",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", ""]
+    },
+    {
+      "label": "Téléphone général",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "04 95 72 93 65"]
+    },
+    {
+      "label": "Ligne PAD",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", ""]
+    },
+    {
+      "label": "Numéro usine X",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", ""]
+    },
+    {
+      "label": "Adresse postale",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", ""]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[project]
+name = "semra"
+version = "1.0"
+description = "SEMRA"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit==1.41.0",
+    "flask==3.1.2",
+    "pytest",
+    "flask_cors"
+#    "streamlit-authenticator"
+]
+
+[tool.uv.sources]
+streamlit-authenticator = { git = "https://gitlab.dtg.dpih.edf.fr/python-dtg/utils/streamlit-authenticator.git", tag = "0.4.0" }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "ruff>=0.9.7",
+    "pre-commit>=4.1.0",
+]
+server = [
+    "gunicorn>=23.0.0",
+]
+
+
+[[tool.uv.index]]
+name = "edf_mirror"
+url = "https://si-devops-mirror.edf.fr/repository/pypi.python.org/simple"

@@ -1,0 +1,499 @@
+/* Plan Application - Tableau éditable */
+
+.table-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.plan-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Calibri, sans-serif;
+    font-size: 15px;
+}
+
+.plan-table td,
+.plan-table th {
+    border: 0.5pt solid #000;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+/* En-têtes et sections */
+.plan-table .title {
+    background: #F2F2F2;
+    font-size: 21px;
+    font-weight: 700;
+    border: none;
+    border-bottom: 0.5pt solid #000;
+}
+
+.plan-table .section {
+    background: #F4B183;
+    font-size: 19px;
+    font-weight: 700;
+    border: none;
+    border-top: 0.5pt solid #000;
+    border-bottom: 0.5pt solid #000;
+}
+
+.plan-table .header {
+    font-weight: 700;
+    background: #FFF2CC;
+}
+
+.plan-table .left {
+    text-align: left;
+}
+
+.plan-table .cat {
+    font-weight: 700;
+    background: #FCE4D6;
+}
+
+/* Classes de valeurs */
+.plan-table .o {
+    background: #C6EFCE;
+    color: #006100;
+}
+
+.plan-table .x {
+    background: #FFC7CE;
+    color: #9C0006;
+}
+
+.plan-table .so {
+    background: #BFBFBF;
+    color: #7F7F7F;
+}
+
+.plan-table .pj {
+    background: #FFEB9C;
+    color: #9C5700;
+}
+
+.plan-table .gray {
+    background: #D9D9D9;
+}
+
+.plan-table .empty {
+    border: none;
+}
+
+.plan-table .legend-title {
+    text-align: right;
+    font-weight: 700;
+    border: none;
+}
+
+/* Cellules éditables */
+.plan-table td[contenteditable="true"] {
+    cursor: text;
+    min-height: 20px;
+    padding: 8px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.plan-table td[contenteditable="true"]:hover {
+    background-color: rgba(244, 177, 131, 0.3) !important;
+}
+
+.plan-table td[contenteditable="true"]:focus {
+    box-shadow: inset 0 0 0 2px #E67E22;
+    background-color: #fff !important;
+}
+
+.plan-table td.editing {
+    background-color: #FFF9E6 !important;
+}
+
+/* Cellules non éditables */
+.plan-table td.no-edit,
+.plan-table th.no-edit {
+    cursor: default;
+}
+
+/* Toolbar d'édition */
+.edit-toolbar {
+    background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+.edit-toolbar-left,
+.edit-toolbar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.edit-toolbar button {
+    background: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    color: #D35400;
+}
+
+.edit-toolbar button:hover {
+    background: #FFF3E0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-toolbar button:active {
+    transform: translateY(0);
+}
+
+.edit-toolbar button.save-btn {
+    background: #27AE60;
+    color: white;
+}
+
+.edit-toolbar button.save-btn:hover {
+    background: #229954;
+}
+
+.edit-toolbar button.reset-btn {
+    background: #E74C3C;
+    color: white;
+}
+
+.edit-toolbar button.reset-btn:hover {
+    background: #C0392B;
+}
+
+.edit-toolbar .status-indicator {
+    color: white;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.edit-toolbar .status-indicator.modified {
+    background: #F39C12;
+    color: #000;
+    animation: pulse 1.5s infinite;
+}
+
+.edit-toolbar .status-indicator.saved {
+    background: #27AE60;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Info cellule sélectionnée */
+.cell-info-bar {
+    background: #FFF9E6;
+    border: 1px solid #F39C12;
+    padding: 8px 15px;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.cell-info-bar .cell-ref {
+    background: #E67E22;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+.cell-info-bar .cell-content-preview {
+    flex: 1;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    background: linear-gradient(135deg, #27AE60, #229954);
+}
+
+.toast.error {
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+}
+
+.toast.info {
+    background: linear-gradient(135deg, #E67E22, #D35400);
+}
+
+.toast .toast-icon {
+    font-size: 20px;
+}
+
+/* Modal de confirmation */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin: 0 0 15px;
+    color: #D35400;
+}
+
+.modal-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.modal-buttons .btn-confirm {
+    background: #E74C3C;
+    color: white;
+}
+
+.modal-buttons .btn-confirm:hover {
+    background: #C0392B;
+}
+
+.modal-buttons .btn-cancel {
+    background: #95A5A6;
+    color: white;
+}
+
+.modal-buttons .btn-cancel:hover {
+    background: #7F8C8D;
+}
+
+/* Historique des modifications */
+.history-panel {
+    position: fixed;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-panel.open {
+    right: 0;
+}
+
+.history-panel-header {
+    background: #E67E22;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-panel-header h3 {
+    margin: 0;
+}
+
+.history-panel-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.history-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.history-item {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.history-item:hover {
+    background: #FFF9E6;
+}
+
+.history-item .history-time {
+    color: #999;
+    font-size: 11px;
+}
+
+.history-item .history-cell {
+    font-weight: 600;
+    color: #D35400;
+}
+
+.history-item .history-old {
+    color: #E74C3C;
+    text-decoration: line-through;
+}
+
+.history-item .history-new {
+    color: #27AE60;
+}
+
+/* Content section */
+.content {
+    margin-top: 30px;
+}
+
+.center-panel {
+    text-align: center;
+}
+
+.outlook-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.send-mail-button {
+    display: inline-block;
+    background: #E67E22;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.send-mail-button:hover {
+    background: #D35400;
+    transform: translateY(-2px);
+}
+
+.reminder-section {
+    margin-top: 20px;
+}
+
+.reminder-title {
+    font-weight: 700;
+    color: #D35400;
+    margin-bottom: 10px;
+}
+
+.reminder-box {
+    background: #FFF3CD;
+    border: 1px solid #F39C12;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.reminder-box p {
+    margin: 0;
+    color: #856404;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .plan-table {
+        font-size: 13px;
+    }
+
+    .edit-toolbar {
+        flex-direction: column;
+    }
+
+    .edit-toolbar-left,
+    .edit-toolbar-right {
+        width: 100%;
+        justify-content: center;
+    }
+}

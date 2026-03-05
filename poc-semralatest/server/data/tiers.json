@@ -1,0 +1,301 @@
+{
+  "columns": [
+    "Nachtigal",
+    "Castillon sur Lez",
+    "Moulin du château",
+    "Fontbonne",
+    "Pas des bêtes",
+    "Nangbeto",
+    "Yaté"
+  ],
+  "rows": [
+    {
+      "bgClass": "bg-cyan",
+      "label": "Exploitant",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "Jean-Paul 2 Taibo ; François Landry Etoga",
+        "",
+        "Julien TESTAS\n0561148114 / 0776098180",
+        "Fabrice VIGNE\n0563765625 / 0671099959",
+        "Jean-Paul LASSERE\n0563618796 / 0629735215",
+        "Sakiye SIZING ; Allassani TCHAKPI",
+        "ROUSSIN BOUCHARD Serge, Andy VAMA, Maxime noyon"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Mail Exploitant",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "jean-paul.taibo@nhpc.cm ;landry.etoga@nhpc.cm",
+        "",
+        "julien.testas@rme-toulouse.fr",
+        "f.vigne@poledeseaux.fr\na.favarel@poledeseaux.fr\nr.ancelin@poledeseaux.fr\nn.vidal@poledeseaux.fr\npierre.robert@poledeseaux.fr\ng.amans@poledeseaux.fr",
+        "jean-paul.lassere@veolia.com",
+        "sakiyesizing@yahoo.fr;tchakpialassani@gmail.com",
+        "s.roussin@enercal.nc; a.vama@enercal.nc; m.noyon@enercal.nc"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Responsable(s)",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "Rodrigue Minsia",
+        "Sylvie GALEY\n0534143214",
+        "",
+        "Cyril ROUMAGNAC",
+        "Fabien BERNAT",
+        "Valentin BITAKO, Gounoum Ibrahim KORA-ZAKI",
+        "OUETCHO Elias, LOQA Jérémy"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Mail Responsable(s)",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "rodrigue.minsia@nhpc.cm",
+        "sylvie.galey@hydrowatt.fr",
+        "",
+        "cyril.roumagnac@poledeseaux.fr",
+        "fabien.bernat@veolia.com",
+        "valentinbitako@gmail.com; kozagoun@yahoo.fr",
+        "e.ouetcho@enercal.nc; j.loqa@enercal.nc"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Maitre d'ouvrage",
+      "type": "simple",
+      "values": [
+        "",
+        "David VERDY",
+        "",
+        "",
+        "Vincent COLOM",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Mail Maitre d'ouvrage",
+      "type": "simple",
+      "values": [
+        "",
+        "david.verdy@hydrowatt.fr",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Ouvrage(s)",
+      "type": "simple",
+      "values": [
+        "Nachtigal",
+        "Castillon sur Lez",
+        "Moulin du chateau",
+        "Fontbonne",
+        "Pas des bêtes",
+        "Nangbeto",
+        "Yaté"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "philippe.bourgey@edf.fr",
+        "elisabeth.barros-maurel@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "daniel.santin@edf.fr",
+        "matthieu.castay@edf.fr",
+        "daniel.santin@edf.fr",
+        "elisabeth.barros-maurel@edf.fr"
+      ],
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Phillipe BOURGEY",
+          "phone": ""
+        },
+        {
+          "name": "Elisabeth BARROS-MAUREL",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Daniel SANTIN",
+          "phone": ""
+        },
+        {
+          "name": "Matthieu CASTAY",
+          "phone": ""
+        },
+        {
+          "name": "Daniel SANTIN",
+          "phone": ""
+        },
+        {
+          "name": "Elisabeth BARROS-MAUREL",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-light-blue",
+      "emailClass": "light-gray-text",
+      "emails": [
+        "barthelemy.steck@edf.fr",
+        "philippe.bourgey@edf.fr",
+        "",
+        "",
+        "",
+        "",
+        "philippe.bourgey@edf.fr"
+      ],
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Phillipe BOURGEY",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Phillipe BOURGEY",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "values": [
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse"
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone barrage",
+      "labelClass": "small",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone général",
+      "labelClass": "small",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Ligne PAD",
+      "labelClass": "small",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Numéro usine X",
+      "labelClass": "small",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "…",
+      "labelClass": "small",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "subtitle": "Correspondants SDO Tiers",
+  "title": "TIERS"
+}

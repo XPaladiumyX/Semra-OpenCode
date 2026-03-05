@@ -1,0 +1,399 @@
+{
+  "columns": [
+    "Aston",
+    "Aude",
+    "Auzat",
+    "Ferrières",
+    "Palaminy",
+    "Vallée d'Ax"
+  ],
+  "rows": [
+    {
+      "bgClass": "bg-blue",
+      "emails": [
+        "sophie.loubix@edf.fr",
+        "vincent.olard@edf.fr",
+        "mickael.truel@edf.fr ; maxime.le-berre@edf.fr",
+        "jerome.canet@edf.fr",
+        "arthur.baley@edf.fr",
+        "guillaume.thore@edf.fr"
+      ],
+      "label": "Correspondant SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Sophie LOUBIX",
+          "phone": "0534092650 / 0630503517"
+        },
+        {
+          "name": "Vincent OLARD",
+          "phone": ""
+        },
+        {
+          "name": "Mickael TRUEL",
+          "phone": "0561020719 / 0633457249"
+        },
+        {
+          "name": "Jérôme CANET",
+          "phone": "0561050471"
+        },
+        {
+          "name": "Arthur BALEY",
+          "phone": ""
+        },
+        {
+          "name": "Guillaume THORE",
+          "phone": "0561054279\n0787230043"
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "vincent.marquier@edf.fr",
+        "nicolas.pelouse@edf.fr",
+        "jerome.maynard@edf.fr",
+        "jean-bernard.labat@edf.fr",
+        "daniel.carmouze@edf.fr",
+        "mathieu.hillaire@edf.fr"
+      ],
+      "label": "Coordo SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Vincent MARQUIER",
+          "phone": "+33561020713"
+        },
+        {
+          "name": "Nicolas PELOUSE",
+          "phone": "0561054250"
+        },
+        {
+          "name": "Jérôme MAYNARD",
+          "phone": "0786357735"
+        },
+        {
+          "name": "Jean-Bernard Labat",
+          "phone": ""
+        },
+        {
+          "name": "Daniel CARMOUZE",
+          "phone": "0561908953"
+        },
+        {
+          "name": "Mathieu HILLAIRE",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "label": "Coordo Planning",
+      "type": "contact",
+      "values": [
+        {
+          "name": "non,",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "daniel.santin@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "daniel.santin@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "daniel.santin@edf.fr",
+        "barthelemy.steck@edf.fr"
+      ],
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Daniel SANTIN",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Daniel SANTIN",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Daniel SANTIN",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "values": [
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Ouvrages",
+      "type": "simple",
+      "values": [
+        "Laparan; Riete; CF Aston",
+        "Puyvalador ; Matemale ; Grandes Patures ; Laurenti",
+        "Gnioure ; Izourt ; Pla de Soulcem",
+        "Garrabet ; Pebernat ; Labarre",
+        "Brioulette ; canal de St Julien ; Saint-vidian ; canal de Palaminy ; Mancières",
+        "Lanoux ; Naguilhes ; Besines ; Sisca ; Goulours ; CF Hospitalet"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "julien.sauvage@edf.fr",
+        "",
+        "abdelhamid.derras@edf.fr",
+        "philippe.teillot@edf.fr",
+        "yann.chafai@edf.fr",
+        "jean-pierre.kouadio@edf.fr"
+      ],
+      "label": "Chef du GU",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Julien Sauvage",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Abdelhamid DERRAS",
+          "phone": ""
+        },
+        {
+          "name": "Philippe Teillot",
+          "phone": ""
+        },
+        {
+          "name": "Yann Chafai",
+          "phone": ""
+        },
+        {
+          "name": "Jean-Pierre Kouadio",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "isLink": true,
+      "label": "Ingénieur UP",
+      "type": "simple",
+      "values": [
+        "aude.lapujade@edf.fr",
+        "pauline.mongin@edf.fr",
+        "pauline.mongin@edf.fr",
+        "aude.lapujade@edf.fr",
+        "pauline.mongin@edf.fr",
+        "aude.lapujade@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "CORBAR",
+      "type": "simple",
+      "values": [
+        "antoine.victor@edf.fr",
+        "jean-luc.kruszyk@edf.fr\naristide.saillard@hydrostadium.fr",
+        "camille.ruellant@edf.fr",
+        "mael.lesourd@edf.fr\naristide.saillard@hydrostadium.fr",
+        "coral.cabanas@edf.fr",
+        "elise.boyenval@edf.fr ; nicolas-n.foucher@edf.fr ; clement.laporte@hydrostadium.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "isLink": true,
+      "label": "Correspondant SDO GEH",
+      "type": "simple",
+      "values": [
+        "christophe.alidieres@edf.fr",
+        "christophe.alidieres@edf.fr",
+        "christophe.alidieres@edf.fr",
+        "christophe.alidieres@edf.fr",
+        "christophe.alidieres@edf.fr",
+        "christophe.alidieres@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "BAL générique GU",
+      "type": "simple",
+      "values": [
+        "exploitant-aston@edf.fr",
+        "exploitant-aude@edf.fr",
+        "exploitant-auzat@edf.fr",
+        "exploitant-ferrieres@edf.fr",
+        "exploitant-palaminy@edf.fr",
+        "exploitant-vallees-d-ax@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "values": [
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse"
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone barrage",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone général",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Ligne PAD",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "Laparan : 0561647573",
+        "",
+        "Gnioure : 0561024614",
+        "",
+        "",
+        "Lanoux : 0561052174"
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Numéro usine X",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Adresse postale",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "title": "* Aude Ariège *"
+}

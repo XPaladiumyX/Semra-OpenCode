@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Grille Envoi EDF - Éditable</title>
+    <link rel="stylesheet" href="../static/css/grille_envoi_edf.css">
+    <link rel="stylesheet" href="../static/main_page.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workflow_modals.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+
+<!-- Toolbar d'édition -->
+<div class="edit-toolbar">
+    <div class="edit-toolbar-left">
+        <button id="saveBtn" class="save-btn">
+            <span>💾</span>
+            <span>Sauvegarder</span>
+        </button>
+        <button id="undoBtn">
+            <span>↶</span>
+            <span>Annuler</span>
+        </button>
+        <button id="exportBtn">
+            <span>📥</span>
+            <span>Exporter JSON</span>
+        </button>
+        <button id="historyBtn">
+            <span>📋</span>
+            <span>Historique</span>
+        </button>
+    </div>
+    <div class="edit-toolbar-right">
+        <div class="status-indicator saved">✓ Sauvegardé</div>
+    </div>
+</div>
+
+<!-- Barre d'information de cellule -->
+<div class="cell-info-bar">
+    <div class="cell-ref">-</div>
+    <div class="cell-content-preview">Sélectionnez une cellule pour l'éditer</div>
+</div>
+
+<!-- Tableau -->
+<div class="table-container">
+    <table class="editable-table">
+        <!-- Le tableau est généré par JavaScript -->
+    </table>
+</div>
+
+<!-- Section bouton mail -->
+<div class="content">
+    <div class="center-panel">
+        <img src="../static/images/send_mail_button.png" alt="Outlook" class="outlook-icon">
+        <button class="send-mail-button" id="openModalBtn" onclick="openMailModal()">
+            <span class="button-icon">📧</span>
+            <span class="button-text">Envoyer un mail !</span>
+        </button>
+        <div class="reminder-section">
+            <p class="reminder-title">Rappel :</p>
+            <div class="reminder-box">
+                <p>Mettre en destinataire du mail l'exploitant qui a réalisé la tournée</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Panneau d'historique -->
+<div class="history-panel">
+    <div class="history-panel-header">
+        <h3>Historique des modifications</h3>
+        <button class="history-panel-close">×</button>
+    </div>
+    <div class="history-list">
+        <!-- L'historique est généré par JavaScript -->
+    </div>
+</div>
+
+<!-- SweetAlert2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- ═══ SEMRA Recipients — configuration de la page ══════════════════════ -->
+<!--
+    La grille d'envoi est une page de configuration : pas de GEH fixe.
+    Le GEH sera déterminé par le dernier clic sur le tableau.
+    On met 'adour_et_gaves' comme valeur par défaut, l'utilisateur peut
+    changer via SEMRA_setGuColIndex() si nécessaire.
+-->
+<script>
+    window.SEMRA_PAGE_CONFIG = {
+        geh:      'adour_et_gaves',   // GEH par défaut (page de config générique)
+        isTiers:  false,
+        serverUrl: '',
+        clientUrl: 'http://localhost:5000'
+    };
+</script>
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<!-- Scripts - ORDRE IMPORTANT -->
+<script src="{{ url_for('static', filename='js/mail_recipients.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main_page.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mail_workflow.js') }}"></script>
+<script src="{{ url_for('static', filename='js/initial_modal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/grille_envoi_edf.js') }}"></script>
+
+</body>
+</html>

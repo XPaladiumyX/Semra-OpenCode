@@ -1,0 +1,172 @@
+{
+  "title": "Matrice de référence des envois de documents via SEMRA : communication externe TIERS",
+  "columns": [
+    "Mail",
+    "Mesures dépouillées",
+    "Ecart surveillance",
+    "Dysfonctionnement matériel",
+    "Alerte comportement",
+    "Rapport",
+    "CR CDA",
+    "CR TOPO",
+    "CR INTERVENTION"
+  ],
+  "columnClasses": [
+    "h-green",
+    "h-green",
+    "h-yellow",
+    "h-yellow",
+    "h-orange",
+    "h-blue",
+    "h-gray",
+    "h-gray",
+    "h-gray"
+  ],
+  "rows": [
+    {
+      "label": "Exploitant",
+      "rowClass": "r-green",
+      "values": ["A", "A", "A", "A", "A", "A", "A", "A", "A"]
+    },
+    {
+      "label": "Maitre d'ouvrage",
+      "rowClass": "r-green",
+      "values": ["CC", "CC", "CC", "CC", "A", "CC", "CC", "CC", "CC"]
+    },
+    {
+      "label": "Chargé-e d'affaires CRA",
+      "rowClass": "r-green",
+      "values": ["CC", "CC", "CC", "CC", "CC", "CC", "CC", "CC", "CC"]
+    },
+    {
+      "label": "Chargé-e d'affaires remplaçant",
+      "rowClass": "r-green",
+      "values": ["CC", "CC", "CC", "CC", "CC", "CC", "CC", "CC", "CC"]
+    },
+    {
+      "label": "",
+      "rowClass": "r-green",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "",
+      "rowClass": "r-green",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "",
+      "rowClass": "r-green",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "",
+      "rowClass": "r-green",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "",
+      "rowClass": "r-green",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "RAPPORTS_REGLEMENTAIRES",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "A", "", "", ""]
+    },
+    {
+      "label": "Liste_dest_recurrents",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "CC", "", "", ""]
+    },
+    {
+      "label": "Chef_DPT",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "CDS_S2MA_Ouest",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "CC", "CC", "CC"]
+    },
+    {
+      "label": "CDS_S2MA_Est",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "CC", "", "", ""]
+    },
+    {
+      "label": "CDS_ASOH",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "CC", "", "", ""]
+    },
+    {
+      "label": "EXPERT_1",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "EXPERT_2",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "SECRETAIRES",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "CC", "CC", "CC", "CC"]
+    },
+    {
+      "label": "DTG_DEP",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "", "", "CC"]
+    },
+    {
+      "label": "SDO_DTG",
+      "rowClass": "r-gray",
+      "values": ["CC", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "COMPTEUR_RAPPORT",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "CC", "", "", ""]
+    },
+    {
+      "label": "COMPTEUR_CDA",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "CC", "", "", "CC", "", "CC"]
+    },
+    {
+      "label": "COMPTEUR_TOPO",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "", "CC", ""]
+    },
+    {
+      "label": "CM_GC_FC_DI",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "DTG_DEP_TOULOUSE",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "DTG_DEP_BRIVE",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "DTG_DEP_GRENOBLE_A",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "DTG_DEP_GRENOBLE_B",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "CC", "", "", "", ""]
+    },
+    {
+      "label": "DTG_DMM_MAINTENANCE",
+      "rowClass": "r-gray",
+      "values": ["", "", "", "", "", "", "", "", ""]
+    }
+  ]
+}

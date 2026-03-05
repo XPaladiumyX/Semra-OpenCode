@@ -1,0 +1,81 @@
+include:
+  - project: common/cicd/library
+    file:
+      - /workflow/protected-mr-tag.yml
+      - /templates/configuration.yml
+      - /templates/docker-image.yml
+      - /stages/deploy/update-values-helm.yml
+      - /templates/dependency-track.yml
+
+stages:
+  - analyse
+  - build-image
+  - deploy
+  - deploy-tag
+
+
+variables:
+    TAG_VERSION: '$CI_COMMIT_REF_SLUG'
+    KANIKO_PROXY_BUILD_ARGS: 'true'
+    KANIKO_ADDITIONAL_ARGS: "--build-arg CI_JOB_TOKEN=${CI_JOB_TOKEN}"
+    DEPENDENCY_TRACK_TECHNOLOGY: python
+    DEPENDENCY_TRACK_PROJECT_UUID: 3a1e845a-5d08-49d4-9123-1cd396711688
+
+build-image:
+  extends:
+    - .python-job
+    - .build-kaniko
+  stage: build-image
+  variables:
+    KANIKO_PROXY_BUILD_ARGS: 'true'
+    KANIKO_DESTINATION_IMAGE: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}
+    rules:
+       - if: $CI_COMMIT_TAG
+
+.deploy:
+  extends: .update-values-helm
+  variables:
+    CHART_PROJECT: "Appui Outils Python DTG/AUTRES/semra-charts"
+    HELM_CHART_DIR: sdf
+    CHART_TARGET_BRANCH: main
+  needs:
+    - build-image
+
+deploy:dev:
+  stage: deploy
+  extends: .deploy
+  variables:
+    CHART_PROPERTY_KEY: app.pods.image.tag,global.podAnnotations.buildTime
+    CHART_PROPERTY_VALUE: '${TAG_VERSION},${CI_COMMIT_TIMESTAMP}'
+    CHART_VALUES_FILE: values.dev.yaml,values.dev.yaml
+  environment:
+    name: dev
+  when: manual
+
+deploy:rec:
+  stage: deploy-tag
+  extends: .deploy
+  variables:
+    CHART_PROPERTY_KEY: app.pods.image.tag,global.podAnnotations.buildTime
+    CHART_PROPERTY_VALUE: '${TAG_VERSION},${CI_COMMIT_TIMESTAMP}'
+    CHART_VALUES_FILE: values.rec.yaml,values.rec.yaml
+  environment:
+    name: rec
+  when: manual
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev"'
+    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_COMMIT_TAG'
+
+deploy:prod:
+  stage: deploy-tag
+  extends: .deploy
+  variables:
+    CHART_PROPERTY_KEY: app.pods.image.tag,global.podAnnotations.buildTime
+    CHART_PROPERTY_VALUE: '${TAG_VERSION},${CI_COMMIT_TIMESTAMP}'
+    CHART_VALUES_FILE: values.prod.yaml,values.prod.yaml
+  environment:
+    name: prod
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  when: manual

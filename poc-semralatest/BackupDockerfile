@@ -1,0 +1,44 @@
+# Declare ARG for use un FORM instructions
+ARG VERSION=3.12-git
+
+# Récupération image DTG
+FROM gitlab.dtg.dpih.edf.fr:5050/common/images/python:$VERSION as builder
+ARG CI_JOB_TOKEN
+
+USER root
+
+# Ecriture du fichier .netrc
+RUN echo "machine gitlab.dtg.dpih.edf.fr\nlogin gitlab-ci-token\npassword $CI_JOB_TOKEN" > /root/.netrc
+RUN cat /root/.netrc
+
+# Installation de git pour récupérer les dépendances
+#RUN apt update && \
+#    apt install -y git --no-install-recommends
+
+# Install the project into '/app'
+COPY pyproject.toml uv.lock /app/
+WORKDIR /app
+
+# Install the project's dependencies using the lockfile and settings
+RUN uv sync --frozen --no-install-project --no-dev --group server
+
+# Then, add the rest of the project source code and install it
+# Installing separately from its dependencies allows optimal layer caching
+COPY . /app
+RUN uv sync --frozen --no-dev --group server
+
+# Final image
+FROM gitlab.dtg.dpih.edf.fr:5050/common/images/python:$VERSION
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /app
+
+COPY --from=builder /app /app
+
+# Place executables in the environment at the front of the path
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Exposer le port que Streamlit utilise par défaut
+EXPOSE 8080
+
+CMD ["sh", "-c", ". /app/.venv/bin/activate && python3 -m streamlit run run.py --server.port 8080  --server.address 0.0.0.0 --server.headless=true --browser.gatherUsageStats false"]

@@ -1,0 +1,203 @@
+{
+  "Interne EDF": {
+    "Surveillance": {
+      "Information, demande action": {
+        "Retard tournée": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "o",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Retard validation": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "o",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Suivi rapproché": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "x",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Demande confirmation": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "o",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Autre": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "x",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        }
+      },
+      "Ecart surveillance": {
+        "Vigilance comportement": {
+          "Choix Ouvrage": "",
+          "Choix Périodicité": "",
+          "Saisie date tournée": "",
+          "Paramètres GED": "",
+          "Outlook": ""
+        },
+        "Dysfonctionnement matériel": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        }
+      },
+      "Alerte": {
+        "": {
+          "Choix Ouvrage": "",
+          "Choix Périodicité": "",
+          "Saisie date tournée": "",
+          "Paramètres GED": "",
+          "Outlook": "o"
+        }
+      }
+    },
+    "Diffusion de documents": {
+      "CR CDA": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "x",
+          "Outlook": "o"
+        }
+      },
+      "CR TOPO": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "x",
+          "Outlook": "o"
+        }
+      },
+      "CR INTERVENTION": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "x",
+          "Outlook": "o"
+        }
+      },
+      "RAPPORT": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "x",
+          "Outlook": "o"
+        }
+      }
+    }
+  },
+  "Tiers": {
+    "Surveillance": {
+      "Information, demande action": {
+        "Mesure dépouillée": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Retard tournée": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "o",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Demande confirmation": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Autre": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "x",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        }
+      },
+      "Ecart surveillance": {
+        "Vigilance comportement": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        },
+        "Dysfonctionnement matériel": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "x",
+          "Saisie date tournée": "o",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        }
+      },
+      "Alerte": {
+        "": {
+          "Choix Ouvrage": "so",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "so",
+          "Outlook": "o"
+        }
+      }
+    },
+    "Diffusion de documents": {
+      "CR CDA": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "PJ",
+          "Outlook": "o"
+        }
+      },
+      "CR TOPO": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "PJ",
+          "Outlook": "o"
+        }
+      },
+      "CR INTERVENTION": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "PJ",
+          "Outlook": "o"
+        }
+      },
+      "RAPPORT": {
+        "": {
+          "Choix Ouvrage": "o",
+          "Choix Périodicité": "so",
+          "Saisie date tournée": "so",
+          "Paramètres GED": "PJ",
+          "Outlook": "o"
+        }
+      }
+    }
+  }
+}

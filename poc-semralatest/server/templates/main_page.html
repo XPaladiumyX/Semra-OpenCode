@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SEMRA V2.7</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='forms/form1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workflow_modals.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+<!-- Bandeau supérieur -->
+<header class="top-banner">
+    <div class="title-container">
+        <h1><span class="red">SEMRA V2.7</span></h1>
+        <h2><span class="red">S</span>ystème d'<span class="red">E</span>nvoi des <span class="red">M</span>ails des <span class="red">R</span>apports et des <span class="red">A</span>lertes</h2>
+    </div>
+    <img src="{{ url_for('static', filename='images/EDF_logo.png') }}" alt="EDF Logo" class="edf-logo">
+
+    <!-- Bandeau statut client local - Version compacte -->
+    <div id="client-status-banner" class="client-status-banner client-status-checking">
+        <span id="client-status-icon">⏳</span>
+        <span id="client-status-text">Client...</span>
+        <button id="client-status-retry" class="client-status-retry-btn" onclick="retryClientCheck()" style="display:none;" title="Réessayer la connexion">
+            🔄
+        </button>
+    </div>
+</header>
+
+<div class="version-info">
+    © EDF HYDRO - DTG - Dép. Surveillance - Centres Régionaux d'Auscultation <br>
+    Version V2.7 (20/01/2026) Toulouse
+</div>
+
+<!-- Layout principal -->
+<div class="content">
+    <!-- Colonne gauche -->
+    <div class="left-panel">
+        <h3 class="entities-title"><strong>Entités disponibles :</strong></h3>
+        <ul class="entity-list">
+            <li><a href="{{ url_for('adour_et_gaves') }}">Adour et Gaves</a></li>
+            <li><a href="{{ url_for('pyrenees') }}">Pyrénées</a></li>
+            <li><a href="{{ url_for('aude_ariege') }}">Aude Ariège</a></li>
+            <li><a href="{{ url_for('tarn_agout') }}">Tarn Agout</a></li>
+            <li><a href="{{ url_for('sei_corse') }}">SEI Corse</a></li>
+            <li><a href="{{ url_for('tiers') }}">Tiers</a></li>
+        </ul>
+    </div>
+
+    <!-- Colonne centrale -->
+    <div class="center-panel">
+        <img src="{{ url_for('static', filename='images/send_mail_button.png') }}" alt="Outlook" class="outlook-icon">
+        <button class="send-mail-button" id="openModalBtn" onclick="openMailModal()">
+            <span class="button-icon">📧</span>
+            <span class="button-text">Envoyer un mail !</span>
+        </button>
+
+        <div class="reminder-section">
+            <p class="reminder-title">Rappel :</p>
+            <div class="reminder-box">
+                <p>Mettre en destinataire du mail l'exploitant qui a réalisé la tournée</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Colonne droite -->
+    <div class="right-panel">
+        <ul class="right-links">
+            <li><a href="{{ url_for('bugs_ou_ameliorations') }}">Signaler un bug !</a></li>
+            <li><a href="{{ url_for('bugs_ou_ameliorations') }}">Proposer une amélioration !</a></li>
+            <li><a href="{{ url_for('config') }}">Configuration de SEMRA</a></li>
+            <li><a href="{{ url_for('grille_envoi_edf') }}">Gérer les destinataires EDF</a></li>
+            <li><a href="{{ url_for('grille_envoi_tiers') }}">Gérer les destinataires TIERS</a></li>
+            <li><a href="{{ url_for('liste_ouvrages') }}">Lister les ouvrages</a></li>
+        </ul>
+
+        <div class="icons-row">
+            <div><img src="{{ url_for('static', filename='images/Loupe.png') }}" class="icon-placeholder" alt="Loupe" id="loupeBtn" style="cursor: pointer;" onclick="openSearchPopup()"></div>
+        </div>
+    </div>
+</div>
+
+<!-- SweetAlert2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- ═══ SEMRA Recipients — configuration de la page ══════════════════════ -->
+<!--
+    Page d'accueil : pas de GEH fixe.
+    L'intégration est chargée pour compatibilité mais ne calculera pas
+    de destinataires auto ici (geh: null → skip silencieux).
+-->
+<script>
+    window.SEMRA_PAGE_CONFIG = {
+        geh:      null,     // page d'accueil : aucun GEH fixe
+        isTiers:  false,
+        serverUrl: '',
+        clientUrl: 'http://localhost:5000'
+    };
+</script>
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<script src="{{ url_for('static', filename='js/mail_recipients.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mail_workflow.js') }}"></script>
+<script src="{{ url_for('static', filename='js/initial_modal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main_page.js') }}"></script>
+
+</body>
+</html>

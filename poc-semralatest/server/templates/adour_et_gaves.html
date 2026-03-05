@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Adour et Gaves</title>
+    <!-- IMPORTANT: main_page.css DOIT être chargé APRÈS adour_et_gaves.css pour que les styles du bouton ne soient pas écrasés -->
+    <link rel="stylesheet" href="../static/css/adour_et_gaves.css">
+    <link rel="stylesheet" href="../static/main_page.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workflow_modals.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>a{color:#0563C1;text-decoration:underline}</style>
+</head>
+<body>
+
+<div class="table-container">
+    <table class="editable-table">
+        <!-- Le tableau est généré par JavaScript -->
+    </table>
+</div>
+
+<div class="content">
+    <div class="center-panel">
+        <img src="../static/images/send_mail_button.png" alt="Outlook" class="outlook-icon">
+        <button class="send-mail-button" id="openModalBtn" onclick="openMailModal()">
+            <span class="button-icon">📧</span>
+            <span class="button-text">Envoyer un mail !</span>
+        </button>
+        <div class="reminder-section">
+            <p class="reminder-title">Rappel :</p>
+            <div class="reminder-box">
+                <p>Mettre en destinataire du mail l'exploitant qui a réalisé la tournée</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SweetAlert2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- ═══ SEMRA Recipients — configuration de la page ══════════════════════ -->
+<script>
+    window.SEMRA_PAGE_CONFIG = {
+        geh:      'adour_et_gaves',
+        isTiers:  false,
+        serverUrl: '',                        // même origine (Flask port 5001)
+        clientUrl: 'http://localhost:5000'    // client local Outlook
+    };
+</script>
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<!-- Scripts - ORDRE IMPORTANT -->
+<!-- Destinataires automatiques (TO/CC/BCC) -->
+<script src="{{ url_for('static', filename='js/mail_recipients.js') }}"></script>
+<!-- 3. main_page.js contient ouvragesData et les fonctions du workflow -->
+<script src="{{ url_for('static', filename='js/main_page.js') }}"></script>
+<!-- 4. Scripts du workflow -->
+<script src="{{ url_for('static', filename='js/mail_workflow.js') }}"></script>
+<script src="{{ url_for('static', filename='js/initial_modal.js') }}"></script>
+<!-- 5. navbar -->
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<!-- 6. Script spécifique à la page (en dernier) -->
+<script src="{{ url_for('static', filename='js/adour_et_gaves.js') }}"></script>
+
+</body>
+</html>

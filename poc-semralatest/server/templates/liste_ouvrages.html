@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste Ouvrages</title>
+    <link rel="stylesheet" href="../static/main_page.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workflow_modals.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        body{font-family:Calibri,sans-serif;font-size:15px}
+        table{border-collapse:collapse}
+        th{background:#51CCEC;font-size:19px;font-weight:700;padding:5px 10px;text-align:left}
+        td{padding:3px 10px;vertical-align:bottom}
+        .geh{color:#0563C1;font-size:16px;font-weight:700;text-decoration:underline}
+        .geh a{color:inherit}
+        a{color:#0563C1;text-decoration:underline}
+    </style>
+</head>
+<body>
+<p>&nbsp;</p>
+<table>
+    <thead>
+        <tr><th>GEH, ENTITE...</th><th>GU, SOUS-ENTITE...</th><th>OUVRAGE, BARRAGE...</th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+<script>
+const data={
+"ADOUR ET GAVES":["adour_et_gaves",[
+["CAMPAN","Gréziolles","Laquets","Castillon"],
+["VAL D'AZUN","Migoëlou","Tech","Arcizans","Canal de Nouaux"],
+["PRAGNERES","Aubert","Aumar","CapdeLong","Escoubous","Gloriettes","Ossoue"],
+["LUCHON","Portillon","LacBleu","Oo","Arbesquens","Pland'Arem"]]],
+"PYRENEES":["pyrenees",[
+["NESTES","Rioumajou","CFFabian"],
+["COUSERANS","Araing"],
+["SAINT-GAUDENS","BMCValentine","BMCGentille"],
+["BAIGTS","Baigts"],
+["BARALET","Peilhou","Estaens"]]],
+"AUDE ARIEGE":["aude_ariege",[
+["ASTON","Laparan","Riete","CFAston"],
+["AUDE","Puyvalador","Matemale","GrandesPatures","Laurenti"],
+["AUZAT","Gnioure","Izourt","PladeSoulcem"],
+["FERRIÈRES","Garrabet","Pebernat","Labarre"],
+["PALAMINY","Brioulette","canaldeStJulien","Saint-vidian","canaldePalaminy","Manciès"],
+["VALLÉE D'AX","Lanoux","Naguilhes","Besines","Sisca","Goulours","CFHospitalet"]]],
+"TARN AGOUT":["tarn_agout",[
+["GOLFECH","Golfechcanal","Golfechusine","Malause"],
+["POUGET - LÉVEZOU (PARELOUP)","Pareloup"],
+["POUGET - LÉVEZOU (BAGE, LA GOURDE)","Bage","LaGourde"],
+["POUGET - LÉVEZOU (PONT DE SALARS)","PontdeSalars"],
+["POUGET - TARN AMONT (VILLEFRANCHE)","SaintAmans","VillefranchedePanat","Truel"],
+["POUGET - TARN AVAL (PINET)","Pinet"],
+["POUGET - TARN AVAL (JOURDANIE)","Jourdanie"],
+["SAUT DE SABO","Rivières","Thuries","LaCroux"],
+["BRASSAC - AGOUT","Luzières","Ponviel","LaRaviège"],
+["BRASSAC - ARN","Baousaval","Sirous","SaintsPeyres"],
+["MONTAHUT","Laouzas","SautdeVesoles"]]],
+"SEI CORSE":["sei_corse",[
+["CASTIRLA (CORSCIA, CALACUCCIA)","Corscia","Calacuccia"],
+["CASTIRLA (SAMPOLO, TREVADINE)","Sampolo","Trévadine"],
+["OCANA (PONT DE LA VANA, TOLLA)","PontdelaVana","Tolla"],
+["OCANA (RIZZANESE)","Rizzanese"]]],
+"TIERS":["tiers",[
+["NACHTIGAL","Nachtigal"],
+["CASTILLON SUR LEZ","CastillonsurLez"],
+["MOULIN DU CHÂTEAU","Moulinduchateau"],
+["FONTBONNE","Fontbonne"],
+["PAS DES BÊTES","Pasdesbêtes"],
+["NANGBETO","Nangbeto"],
+["YATÉ","Yaté"]]]
+};
+const t=document.getElementById("tbody");
+for(const[geh,[route,gus]]of Object.entries(data)){
+    for(const gu of gus){
+        const guName=gu[0];
+        for(let i=1;i<gu.length;i++){
+            const tr=document.createElement("tr");
+            tr.innerHTML=`<td class="geh"><a href="${route}">${geh}</a></td><td>${guName}</td><td>${gu[i]}</td>`;
+            t.appendChild(tr);
+        }
+    }
+}
+</script>
+<div class="content">
+    <div class="center-panel">
+        <img src="../static/images/send_mail_button.png" alt="Outlook" class="outlook-icon">
+        <button class="send-mail-button" id="openModalBtn" onclick="openMailModal()">
+            <span class="button-icon">📧</span>
+            <span class="button-text">Envoyer un mail !</span>
+        </button>
+        <div class="reminder-section">
+            <p class="reminder-title">Rappel :</p>
+            <div class="reminder-box">
+                <p>Mettre en destinataire du mail l'exploitant qui a réalisé la tournée</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SweetAlert2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Scripts - ORDRE IMPORTANT -->
+<!-- 1. main_page.js contient ouvragesData et les fonctions du workflow -->
+<script src="{{ url_for('static', filename='js/main_page.js') }}"></script>
+<!-- 2. Scripts du workflow -->
+<script src="{{ url_for('static', filename='js/mail_workflow.js') }}"></script>
+<script src="{{ url_for('static', filename='js/initial_modal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* ============================================
+   SEMRA - Workflow Modals CSS
+   ============================================ */
+
+/* Modal Overlay */
+.workflow-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content */
+.workflow-modal-content {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Header */
+.workflow-modal-header {
+    background: linear-gradient(135deg, #003d7a 0%, #0056a8 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workflow-modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.workflow-modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 32px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.workflow-modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.workflow-modal-body {
+    padding: 35px 30px;
+}
+
+.workflow-info {
+    background: linear-gradient(135deg, #e8f4fd 0%, #d4e8f7 100%);
+    border-left: 5px solid #003d7a;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+.workflow-info strong {
+    color: #003d7a;
+    font-weight: 700;
+}
+
+.workflow-label {
+    font-size: 17px;
+    font-weight: 700;
+    color: #003d7a;
+    margin-bottom: 20px;
+}
+
+.workflow-sublabel {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Options Grid */
+.workflow-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.workflow-option-btn {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 3px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+    color: #003d7a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.workflow-option-btn:hover {
+    border-color: #0056a8;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 61, 122, 0.25);
+}
+
+.workflow-option-btn:active {
+    transform: translateY(-2px);
+}
+
+/* Bouton sélectionné - Style vert */
+.workflow-option-btn.selected {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border-color: #28a745;
+    color: white;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.workflow-option-btn.selected:hover {
+    background: linear-gradient(135deg, #20c997 0%, #17a589 100%);
+    border-color: #20c997;
+}
+
+/* Badge de checkmark pour les boutons sélectionnés */
+.workflow-option-btn.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    color: #28a745;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Résumé des sélections */
+.selection-summary {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px solid #28a745;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+}
+
+.selection-summary p {
+    margin: 0 0 10px 0;
+    color: #1b5e20;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.selection-summary #summaryContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.selection-tag {
+    background: white;
+    color: #1b5e20;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.workflow-icon {
+    font-size: 32px;
+    display: block;
+}
+
+/* Date Input */
+.workflow-date-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 3px solid #dee2e6;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.workflow-date-input:focus {
+    outline: none;
+    border-color: #003d7a;
+    box-shadow: 0 0 0 4px rgba(0, 61, 122, 0.1);
+}
+
+/* Submit Button */
+.workflow-submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.workflow-submit-btn:hover {
+    background: linear-gradient(135deg, #20c997 0%, #17a589 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+.workflow-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Scrollbar Styling */
+.workflow-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.workflow-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.workflow-modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #003d7a 0%, #0056a8 100%);
+    border-radius: 5px;
+}
+
+.workflow-modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0056a8 0%, #007acc 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workflow-modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .workflow-modal-header {
+        padding: 20px;
+    }
+
+    .workflow-modal-header h2 {
+        font-size: 20px;
+    }
+
+    .workflow-modal-body {
+        padding: 25px 20px;
+    }
+
+    .workflow-options {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-option-btn {
+        padding: 18px 15px;
+    }
+}
+
+/* Animation pour les boutons */
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.workflow-option-btn.highlight {
+    animation: buttonPulse 0.6s ease-in-out infinite;
+}

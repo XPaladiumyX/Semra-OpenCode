@@ -1,0 +1,314 @@
+{
+  "columns": [
+    "CAMPAN",
+    "VAL D'AZUN",
+    "PRAGNERES",
+    "LUCHON"
+  ],
+  "rows": [
+    {
+      "bgClass": "bg-blue",
+      "emails": [
+        "benoit.alexandre@edf.fr",
+        "philippe.abat@edf.fr;malvin.hadet@edf.fr",
+        "herve.levrier@edf.fr",
+        "christophe.carles@edf.fr"
+      ],
+      "label": "Correspondant SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Benoit ALEXANDRE",
+          "phone": "05 62 91 69 74"
+        },
+        {
+          "name": "Malvin HADET",
+          "phone": "05 62 97 60 11"
+        },
+        {
+          "name": "Hervé LEVRIER",
+          "phone": "05 62 92 43 30"
+        },
+        {
+          "name": "Christophe CARLES",
+          "phone": "0561962604/0644954887"
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "didier.raffenaud@edf.fr",
+        "paul.bourdier@edf.fr",
+        "herve.lalanne-barbe@edf.fr",
+        "sofiene.ben-salem@edf.fr"
+      ],
+      "label": "Coordo SDO",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Didier RAFFENAUD",
+          "phone": "05 62 91 69 83"
+        },
+        {
+          "name": "Paul BOURDIER",
+          "phone": ""
+        },
+        {
+          "name": "LALANNE BARBE Hervé",
+          "phone": "05 62 92 43 32"
+        },
+        {
+          "name": "Sofiene BEN SALEM",
+          "phone": "05 61 94 62 53 / 06 70 22 11 21"
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "patrick.anthian@edf.fr",
+        "marion.simon@edf.fr",
+        "simon.lavabre@edf.fr; pierre.mousque@edf.fr",
+        ""
+      ],
+      "label": "Coordo Planning",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Patrick ANTHIAN",
+          "phone": "05 62 91 69 85"
+        },
+        {
+          "name": "Marion SIMON",
+          "phone": "05 82 06 04 58"
+        },
+        {
+          "name": "Pierre MOUSQUE\nSimon LAVABRE",
+          "phone": "05 62 92 43 22"
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "matthieu.castay@edf.fr",
+        "elisabeth.barros-maurel@edf.fr",
+        "barthelemy.steck@edf.fr",
+        "philippe.bourgey@edf.fr"
+      ],
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Matthieu CASTAY",
+          "phone": ""
+        },
+        {
+          "name": "Elisabeth BARROS-MAUREL",
+          "phone": ""
+        },
+        {
+          "name": "Barthélémy STECK",
+          "phone": ""
+        },
+        {
+          "name": "Phillipe BOURGEY",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "emails": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "values": [
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Ouvrages",
+      "type": "simple",
+      "values": [
+        "Gréziolles; Laquets; Castillon",
+        "Migoëlou; Tech; Arcizans; Canal_de_Nouaux",
+        "Aubert; Aumar; Cap de Long; Escoubous; Gloriettes; Ossoue",
+        "Portillon; Lac Bleu; Oo; Arbesquens; Plan d'Arem"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "emails": [
+        "gregoire.mollaret@edf.fr",
+        "",
+        "laurent.goubert@edf.fr",
+        "eric.tibolla@edf.fr"
+      ],
+      "label": "Chef du GU",
+      "type": "contact",
+      "values": [
+        {
+          "name": "Grégoire MOLLARET",
+          "phone": ""
+        },
+        {
+          "name": "",
+          "phone": ""
+        },
+        {
+          "name": "Laurent GOUBERT",
+          "phone": ""
+        },
+        {
+          "name": "Eric TIBOLLA",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "isLink": true,
+      "label": "Ingénieur UP",
+      "type": "simple",
+      "values": [
+        "adelise.lafrique@edf.fr",
+        "adelise.lafrique@edf.fr",
+        "adelise.lafrique@edf.fr",
+        "nicolas.donio@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "CORBAR",
+      "type": "simple",
+      "values": [
+        "jordan.sauvage@edf.fr",
+        "laurent.faramond@edf.fr",
+        "eloise.guerrere@edf.fr",
+        "elise.boyenval@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-cyan",
+      "label": "Correspondant SDO GEH",
+      "type": "simple",
+      "values": [
+        "luc.teroin@edf.fr",
+        "luc.teroin@edf.fr",
+        "luc.teroin@edf.fr",
+        "luc.teroin@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "BAL générique GU",
+      "type": "simple",
+      "values": [
+        "exploitant-campan@edf.fr",
+        "exploitant-val-d-azun@edf.fr",
+        "exploitant-pragneres@edf.fr",
+        "exploitant-luchon@edf.fr"
+      ]
+    },
+    {
+      "bgClass": "bg-blue",
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "values": [
+        "Toulouse",
+        "Toulouse",
+        "Toulouse",
+        "Toulouse"
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone barrage",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Téléphone général",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Ligne PAD",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Numéro usine X",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "bgClass": "bg-light",
+      "label": "Adresse postale",
+      "textClass": "small",
+      "type": "simple",
+      "values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "title": "* GEH Adour et Gaves *"
+}

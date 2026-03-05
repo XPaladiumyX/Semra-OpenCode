@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration - SEMRA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/config_editor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+</head>
+<body>
+    <!-- Warning Overlay -->
+    <div id="warningOverlay" class="warning-overlay">
+        <div class="warning-popup">
+            <div class="warning-icon">⚠️</div>
+            <h2>Attention !</h2>
+            <p class="warning-message">Vous êtes sur le point de modifier la configuration de SEMRA</p>
+            <p class="warning-submessage">Les modifications apportées affecteront TOUS les utilisateurs de l'application</p>
+            <button id="warningOkBtn" class="warning-btn">J'ai compris</button>
+        </div>
+    </div>
+
+    <!-- Toast overlay et notification -->
+    <div id="toastOverlay" class="toast-overlay"></div>
+    <div id="toastNotification" class="toast-notification">
+        <span class="toast-icon"></span>
+        <span class="toast-message"></span>
+    </div>
+
+    <div class="config-editor">
+        <h1 class="page-title">⚙️ Configuration de SEMRA</h1>
+
+        <!-- Boutons en haut -->
+        <div class="config-actions config-actions-top">
+            <button id="saveBtnTop" class="save-btn">Sauvegarder la configuration</button>
+            <button id="resetBtnTop" class="reset-btn">Restaurer les valeurs par défaut</button>
+        </div>
+
+        <div id="successMessage" class="success-message"></div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <!-- Section Signature -->
+        <div class="signature-section">
+            <h3>✏️ Sélection de la Signature pour les Mails</h3>
+            <p style="color:#555; margin-bottom:20px; font-size:14px;">
+                Choisissez la signature qui sera utilisée lors de la génération des mails.
+                Cette signature sera automatiquement ajoutée à la fin de chaque mail envoyé.
+            </p>
+            <div class="signature-grid">
+                <div class="signature-option selected" data-signature="TOULOUSE" onclick="selectSignature(this)">
+                    <input type="radio" name="signature" value="TOULOUSE" class="signature-radio" checked>
+                    <span class="signature-icon">🏔️</span>
+                    <div class="signature-info">
+                        <div class="signature-name">S2MA Ouest - Toulouse</div>
+                        <div class="signature-email">hydro-dtg-toulouse-depouillement@edf.fr</div>
+                    </div>
+                </div>
+                <div class="signature-option" data-signature="BRIVE" onclick="selectSignature(this)">
+                    <input type="radio" name="signature" value="BRIVE" class="signature-radio">
+                    <span class="signature-icon">🏞️</span>
+                    <div class="signature-info">
+                        <div class="signature-name">S2MA Ouest - Brive</div>
+                        <div class="signature-email">hydro-dtg-brive-depouillement@edf.fr</div>
+                    </div>
+                </div>
+                <div class="signature-option" data-signature="GRENOBLE_A" onclick="selectSignature(this)">
+                    <input type="radio" name="signature" value="GRENOBLE_A" class="signature-radio">
+                    <span class="signature-icon">⛰️</span>
+                    <div class="signature-info">
+                        <div class="signature-name">S2MA Est - Grenoble Équipe A</div>
+                        <div class="signature-email">dtg.grenoble-depouillement-A@edf.fr</div>
+                    </div>
+                </div>
+                <div class="signature-option" data-signature="GRENOBLE_B" onclick="selectSignature(this)">
+                    <input type="radio" name="signature" value="GRENOBLE_B" class="signature-radio">
+                    <span class="signature-icon">🗻</span>
+                    <div class="signature-info">
+                        <div class="signature-name">S2MA Est - Grenoble Équipe B</div>
+                        <div class="signature-email">dtg.grenoble-depouillement-B@edf.fr</div>
+                    </div>
+                </div>
+            </div>
+            <div class="signature-display">
+                <strong>Signature sélectionnée :</strong> <span id="selectedSignatureDisplay">S2MA Ouest - Toulouse</span>
+            </div>
+        </div>
+
+        <!-- Contenu dynamique généré par JavaScript -->
+        <div id="configContent"></div>
+
+        <!-- Boutons en bas -->
+        <div class="config-actions">
+            <button id="saveBtn" class="save-btn">Sauvegarder la configuration</button>
+            <button id="resetBtn" class="reset-btn">Restaurer les valeurs par défaut</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/config_editor.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+{
+  "title": "* Tarn Agout *",
+  "columns": [
+    "Golfech",
+    "Pouget - Lévezou (Pareloup)",
+    "Pouget - Lévezou (Bage, La gourde)",
+    "Pouget - Lévezou (Pont de Salars)",
+    "Pouget - Tarn amont (villefranche)",
+    "Pouget - Tarn Aval (Pinet)",
+    "Pouget - Tarn Aval (Jourdanie)",
+    "Saut de Sabo",
+    "Brassac - Agout",
+    "Brassac - Arn",
+    "Montahut"
+  ],
+  "rows": [
+    {
+      "label": "Correspondant SDO",
+      "type": "contact",
+      "bgClass": "bg-blue",
+      "values": [
+        {"name": "Laurent Lemaire", "phone": ""},
+        {"name": "Romeo SILVA FREITAS", "phone": "06 79 22 26 10"},
+        {"name": "Romeo SILVA FREITAS", "phone": "06 79 22 26 10"},
+        {"name": "Romeo SILVA FREITAS", "phone": "06 79 22 26 10"},
+        {"name": "Sylvain FIANCETTE\nGautier VAYSSE\nThomas MALLET (Truel)", "phone": "05 65 46 65 10"},
+        {"name": "David GAUBERT", "phone": ""},
+        {"name": "David GAUBERT", "phone": ""},
+        {"name": "Damien Savy\nSylvain Bonte\nFabien Gayraud", "phone": "07 72 01 58 83"},
+        {"name": "Fabrice IMELE", "phone": ""},
+        {"name": "Romain Maynadie", "phone": "05 63 97 71 28"},
+        {"name": "Dominique Bernocco", "phone": "07 84 19 24 56"}
+      ],
+      "emails": [
+        "Laurent-l.lemaire@edf.fr",
+        "romeo.silva-freitas@edf.fr",
+        "romeo.silva-freitas@edf.fr",
+        "romeo.silva-freitas@edf.fr",
+        "sylvain.fiancette@edf.fr; gautier.vaysse@edf.fr; thomas.mallet@edf.fr",
+        "david.gaubert@edf.fr",
+        "david.gaubert@edf.fr",
+        "damien.savy@edf.fr; sylvain.bonte@edf.fr; fabien.gayraud@edf.fr",
+        "fabrice.imele@edf.fr",
+        "romain.maynadie@edf.fr",
+        "dominique.bernocco@edf.fr"
+      ],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Coordo SDO",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "Franck Vache", "phone": ""},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Hubert Carlassare", "phone": "05 65 46 65 04\n06 74 17 12 13"},
+        {"name": "Damien Savy", "phone": "07 72 01 58 83"},
+        {"name": "Thomas CASSAGNE\nJean-Marc DEVIC", "phone": ""},
+        {"name": "Thomas CASSAGNE\nJean-Marc DEVIC", "phone": ""},
+        {"name": "Stéphane Bascoul", "phone": "04 67 97 89 03 / 06 73 34 24 67"}
+      ],
+      "emails": [
+        "franck.vache@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "hubert.carlassare@edf.fr; christophe.borie@edf.fr",
+        "damien.savy@edf.fr; jean-charles.record@edf.fr; sebastien.escourbiac@edf.fr",
+        "thomas.cassagne@edf.fr; jean-marc.devic@edf.fr",
+        "thomas.cassagne@edf.fr; jean-marc.devic@edf.fr",
+        "stephane.bascoul@edf.fr"
+      ],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Coordo Planning",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "Christophe RATIER", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""}
+      ],
+      "emails": ["Christophe.ratier@edf.fr", "", "", "", "", "", "", "", "", "", ""],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Chargé-e d'affaires CRA",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "values": [
+        {"name": "Daniel SANTIN", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Matthieu CASTAY", "phone": ""},
+        {"name": "Daniel SANTIN", "phone": ""}
+      ],
+      "emails": [
+        "daniel.santin@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "matthieu.castay@edf.fr",
+        "daniel.santin@edf.fr"
+      ],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Chargé-e d'affaires remplaçant",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "emailClass": "gray-text",
+      "values": [
+        {"name": "Elisabeth BARROS-MAUREL", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""},
+        {"name": "", "phone": ""}
+      ],
+      "emails": ["elisabeth.barros-maurel@edf.fr", "", "", "", "", "", "", "", "", "", ""],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-light-cyan", "bg-light-cyan", "bg-light-cyan", "bg-light-cyan"],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-light-cyan", "bg-light-cyan", "bg-light-cyan", "bg-light-cyan"]
+    },
+    {
+      "label": "Ouvrages",
+      "type": "simple",
+      "bgClass": "bg-cyan",
+      "values": [
+        "Gréziolles; Laquets; Castillon",
+        "Pareloup",
+        "Bage ; La Gourde",
+        "Pont de Salars",
+        "Saint Amans ; Villefranche de Panat ; Truel",
+        "Pinet",
+        "Jourdanie",
+        "Rivières ; Thuries ; La Croux",
+        "Luzières ; Ponviel ; La Raviège",
+        "Baous aval ; Sirous ; Saints Peyres",
+        "Laouzas ; Saut de Vesoles"
+      ],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Chef du GU",
+      "type": "contact",
+      "bgClass": "bg-cyan",
+      "values": [
+        {"name": "Jean-christophe MAGNE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Christophe BORIE", "phone": ""},
+        {"name": "Jean-Charles Record", "phone": ""},
+        {"name": "Icham GUERET", "phone": ""},
+        {"name": "Icham GUERET", "phone": ""},
+        {"name": "Benoît PECCOL", "phone": ""}
+      ],
+      "emails": [
+        "jean-christophe.magne@edf.fr",
+        "christophe.borie@edf.fr",
+        "christophe.borie@edf.fr",
+        "christophe.borie@edf.fr",
+        "christophe.borie@edf.fr",
+        "christophe.borie@edf.fr",
+        "christophe.borie@edf.fr",
+        "jean-charles.record@edf.fr",
+        "icham.gueret@edf.fr",
+        "icham.gueret@edf.fr",
+        "benoit.peccol@edf.fr ; olivier.bardou@edf.fr ; thierry.casellato@edf.fr ; hydro-so-encadrement-montahut@edf.fr"
+      ],
+      "cellBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"],
+      "emailBgClasses": ["bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-cyan", "bg-blue", "bg-blue", "bg-blue", "bg-blue"]
+    },
+    {
+      "label": "Ingénieur UP",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "isLink": true,
+      "values": [
+        "nicolas.donio@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "damien.dubus@edf.fr",
+        "nicolas.donio@edf.fr",
+        "nicolas.donio@edf.fr",
+        "nicolas.donio@edf.fr"
+      ]
+    },
+    {
+      "label": "CORBAR",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": [
+        "julien.viarre@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "patrick-j.bardet@edf.fr",
+        "fabien.chaminade@edf.fr",
+        "rafik.bokhaldi@edf.fr",
+        "rafik.bokhaldi@edf.fr",
+        "jean-luc.kruszyk@edf.fr"
+      ]
+    },
+    {
+      "label": "Correspondant SDO GEH",
+      "type": "simple",
+      "bgClass": "bg-cyan",
+      "isLink": true,
+      "values": [
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr",
+        "vincent.mouluquet@edf.fr"
+      ]
+    },
+    {
+      "label": "BAL générique GU",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": [
+        "exploitant-golfech@edf.fr",
+        "exploitant-pouget-tarn-levezou@edf.fr",
+        "exploitant-pouget-tarn-levezou@edf.fr",
+        "exploitant-pouget-tarn-levezou@edf.fr",
+        "exploitant-pouget-truel@edf.fr",
+        "exploitant-pouget-tarn-levezou@edf.fr",
+        "exploitant-pouget-tarn-levezou@edf.fr",
+        "exploitant-saut-sabo@edf.fr",
+        "exploitant-brassac@edf.fr",
+        "exploitant-baous@edf.fr",
+        "exploitant-montahut@edf.fr ; benoit.peccol@edf.fr ; olivier.bardou@edf.fr ; thierry.casellato@edf.fr ; hydro-so-encadrement-montahut@edf.fr"
+      ]
+    },
+    {
+      "label": "Equipe dépouillement",
+      "type": "simple",
+      "bgClass": "bg-blue",
+      "values": ["Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse", "Toulouse"]
+    },
+    {
+      "label": "Téléphone barrage",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "Téléphone général",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "Ligne PAD",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "Numéro usine X",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "label": "Adresse postale",
+      "type": "simple",
+      "bgClass": "bg-light",
+      "textClass": "small",
+      "values": ["", "", "", "", "", "", "", "", "", "", ""]
+    }
+  ]
+}
