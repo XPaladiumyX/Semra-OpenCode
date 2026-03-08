@@ -31,7 +31,6 @@ class BugsTable {
             <div class="edit-toolbar-left">
                 <button class="save-btn" data-action="save">Sauvegarder</button>
                 <button class="add-btn" data-action="add">➕ Nouvelle ligne</button>
-                <button class="reset-btn" data-action="reset">Réinitialiser</button>
                 <button data-action="history">📜 Historique</button>
             </div>
             <div class="edit-toolbar-right">
@@ -125,32 +124,6 @@ class BugsTable {
         }
     }
 
-    async resetData() {
-        this.data = this.getDefaultData();
-        this.originalData = JSON.parse(JSON.stringify(this.data));
-        localStorage.removeItem('bugs_ou_ameliorations_data');
-        this.history = [];
-        this.render();
-        this.bindEvents();
-        this.updateHistoryPanel();
-        this.hideModal();
-
-        try {
-            const res = await fetch(`${this.apiUrl}/save`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(this.data)
-            });
-            if (!res.ok) throw new Error('Erreur serveur');
-            this.setModified(false);
-            this.toast('Données réinitialisées !', 'success');
-        } catch (e) {
-            localStorage.setItem('bugs_ou_ameliorations_data', JSON.stringify(this.data));
-            this.setModified(false);
-            this.toast('Données réinitialisées (sauvegarde locale)', 'info');
-        }
-    }
-
     // ==================== RENDU ====================
 
     render() {
@@ -212,7 +185,6 @@ class BugsTable {
             const action = e.target.dataset.action;
             if (action === 'save') this.saveData();
             if (action === 'add') this.addRow();
-            if (action === 'reset') this.showModal('Réinitialiser toutes les modifications ?', () => this.resetData());
             if (action === 'history') this.toggleHistory();
             if (action === 'export') this.exportCSV();
             if (action === 'closeHistory') this.toggleHistory();

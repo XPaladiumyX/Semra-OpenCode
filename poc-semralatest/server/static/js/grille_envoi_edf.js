@@ -11,9 +11,37 @@
         return; // Sortir immédiatement
     }
 
+    const STORAGE_KEY = 'grille_envoi_edf_history';
+
+    function loadHistoryFromStorage() {
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : [];
+        } catch (e) {
+            console.error('[grille_envoi_edf] Error loading history:', e);
+            return [];
+        }
+    }
+
+    function saveHistoryToStorage() {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(modificationHistory));
+        } catch (e) {
+            console.error('[grille_envoi_edf] Error saving history:', e);
+        }
+    }
+
+    function clearHistoryStorage() {
+        try {
+            localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+            console.error('[grille_envoi_edf] Error clearing history:', e);
+        }
+    }
+
     let tableData = null;
     let originalData = null;
-    let modificationHistory = [];
+    let modificationHistory = loadHistoryFromStorage();
     let isModified = false;
 
     // Charger les données JSON via l'API
@@ -25,6 +53,7 @@
             originalData = JSON.parse(JSON.stringify(tableData)); // Deep copy
             renderTable();
             setupEventListeners();
+            updateHistoryPanel();
             console.log('✅ [grille_envoi_edf] Données chargées');
         } catch (error) {
             console.error('[grille_envoi_edf] Erreur lors du chargement des données:', error);
@@ -182,6 +211,7 @@
 
     function addToHistory(change) {
         modificationHistory.push(change);
+        saveHistoryToStorage();
         updateHistoryPanel();
     }
 
@@ -276,6 +306,7 @@
         }
 
         const lastChange = modificationHistory.pop();
+        saveHistoryToStorage();
         tableData.rows[lastChange.row].values[lastChange.col] = lastChange.oldValue;
 
         const cell = document.querySelector(`[data-row="${lastChange.row}"][data-col="${lastChange.col}"]`);

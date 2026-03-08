@@ -30,7 +30,6 @@ class EditableTable {
         toolbar.innerHTML = `
             <div class="edit-toolbar-left">
                 <button class="save-btn" data-action="save">Sauvegarder</button>
-                <button class="reset-btn" data-action="reset">Réinitialiser</button>
                 <button data-action="history">📜 Historique</button>
             </div>
             <div class="edit-toolbar-right">
@@ -124,32 +123,6 @@ class EditableTable {
         }
     }
 
-    async resetData() {
-        this.data = this.getDefaultData();
-        this.originalData = JSON.parse(JSON.stringify(this.data));
-        localStorage.removeItem('sei_corse_data');
-        this.history = [];
-        this.render();
-        this.bindEvents();
-        this.updateHistoryPanel();
-        this.hideModal();
-
-        try {
-            const res = await fetch(`${this.apiUrl}/save`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(this.data)
-            });
-            if (!res.ok) throw new Error('Erreur serveur');
-            this.setModified(false);
-            this.toast('Données réinitialisées et sauvegardées !', 'success');
-        } catch (e) {
-            localStorage.setItem('sei_corse_data', JSON.stringify(this.data));
-            this.setModified(false);
-            this.toast('Données réinitialisées (sauvegarde locale)', 'info');
-        }
-    }
-
     // ==================== RENDU ====================
 
     render() {
@@ -225,7 +198,6 @@ class EditableTable {
         document.querySelector('.edit-toolbar').onclick = e => {
             const action = e.target.dataset.action;
             if (action === 'save') this.saveData();
-            if (action === 'reset') this.showModal('Réinitialiser toutes les modifications ?', () => this.resetData());
             if (action === 'history') this.toggleHistory();
             if (action === 'export') this.exportCSV();
             if (action === 'closeHistory') this.toggleHistory();

@@ -33,7 +33,6 @@ class PlanApplicationTable {
         toolbar.innerHTML = `
             <div class="edit-toolbar-left">
                 <button class="save-btn" data-action="save">💾 Sauvegarder</button>
-                <button class="reset-btn" data-action="reset">🔄 Réinitialiser</button>
                 <button data-action="history">📜 Historique</button>
             </div>
             <div class="edit-toolbar-right">
@@ -252,34 +251,6 @@ class PlanApplicationTable {
         }
     }
 
-    async resetData() {
-        this.data = this.getDefaultData();
-        this.originalData = JSON.parse(JSON.stringify(this.data));
-        this.orderIndex = this.buildOrderIndex(this.data);
-        localStorage.removeItem('plan_application_data');
-
-        this.history = [];
-        this.render();
-        this.bindEvents();
-        this.updateHistoryPanel();
-        this.hideModal();
-
-        try {
-            const res = await fetch(`${this.apiUrl}/save`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(this.data)
-            });
-            if (!res.ok) throw new Error('Erreur serveur');
-            this.setModified(false);
-            this.toast('Données réinitialisées et sauvegardées !', 'success');
-        } catch (e) {
-            localStorage.setItem('plan_application_data', JSON.stringify(this.data));
-            this.setModified(false);
-            this.toast('Données réinitialisées (sauvegarde locale)', 'info');
-        }
-    }
-
     // ==================== RENDU ====================
 
     render() {
@@ -419,7 +390,6 @@ class PlanApplicationTable {
                 e.preventDefault();
                 const action = btn.dataset.action;
                 if (action === 'save') this.saveData();
-                else if (action === 'reset') this.showModal('Réinitialiser toutes les données ?', () => this.resetData());
                 else if (action === 'history') this.toggleHistory();
                 else if (action === 'closeHistory') this.toggleHistory();
                 else if (action === 'export') this.exportCSV();

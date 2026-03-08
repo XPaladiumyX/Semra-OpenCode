@@ -1,3 +1,4 @@
 streamlit
 flask
+flask-cors
 pyinstaller==6.18.0

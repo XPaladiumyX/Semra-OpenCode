@@ -598,31 +598,6 @@ async function saveConfiguration() {
     }
 }
 
-async function resetConfiguration() {
-    if (!confirm('Êtes-vous sûr de vouloir réinitialiser la configuration aux valeurs par défaut ? Cette action est irréversible.')) {
-        return;
-    }
-
-    try {
-        const response = await fetch('/api/config', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(DEFAULT_CONFIG)
-        });
-
-        if (response.ok) {
-            currentConfig = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
-            fillFormWithConfig(currentConfig);
-            showToast('Configuration réinitialisée aux valeurs par défaut', 'success');
-        } else {
-            throw new Error('Erreur serveur');
-        }
-    } catch (error) {
-        console.error('Erreur lors de la réinitialisation:', error);
-        showToast('Erreur lors de la réinitialisation', 'error');
-    }
-}
-
 // ============================================
 // Génération de mails avec signature
 // ============================================
@@ -677,20 +652,10 @@ document.addEventListener('DOMContentLoaded', function() {
         saveBtn.addEventListener('click', saveConfiguration);
     }
 
-    const resetBtn = document.getElementById('resetBtn');
-    if (resetBtn) {
-        resetBtn.addEventListener('click', resetConfiguration);
-    }
-
     // Event listeners pour les boutons du HAUT
     const saveBtnTop = document.getElementById('saveBtnTop');
     if (saveBtnTop) {
         saveBtnTop.addEventListener('click', saveConfiguration);
-    }
-
-    const resetBtnTop = document.getElementById('resetBtnTop');
-    if (resetBtnTop) {
-        resetBtnTop.addEventListener('click', resetConfiguration);
     }
 });
 
